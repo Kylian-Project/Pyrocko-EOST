@@ -1,9 +1,9 @@
 Metadata-Version: 2.1
 Name: pyrockoeost
-Version: 2023.9
+Version: 2023.7
 Summary: A versatile seismology toolkit for Python.
-Author-email: The pyrockoeost Developers <pyrocko@gmail.com>
-Maintainer-email: Pyrocko EOST <pyrocko@gmail.com>
+Author-email: The pyrockoeost Developers <info@pyrocko.org>
+Maintainer-email: Sebastian Heimann <sebastian.heimann@uni-potsdam.de>
 License: GPLv3
 Project-URL: homepage, https://pyrocko.org
 Project-URL: documentation, https://pyrocko.org/docs
@@ -28,14 +28,6 @@ Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE.md
 License-File: AUTHORS.md
-Requires-Dist: numpy>=1.16
-Requires-Dist: scipy>=1.0
-Requires-Dist: pyyaml
-Requires-Dist: matplotlib
-Requires-Dist: requests
-Requires-Dist: PyQt5
-Requires-Dist: PyQtWebEngine
-Requires-Dist: vtk
 
 
 # Pyrocko EOST | Snuffler
@@ -44,47 +36,17 @@ Snuffler est un plugin pour la visualisation de traces sismologiques qui fait pa
 
 ### ATTENTION  
 Si vous avez déjà une version de Pyrocko d'installer, veuillez la désinstaller en suivant les consignes ci-dessous.
-
-## Désinstallation
+## Installation
+**Installer PIP (LINUX) :**    
+sudo apt-get install python3-pip  
+### Installation avec PIP.  
 **LINUX :**
 ```bash
->  sudo pip3 uninstall pyrockoeost
->  sudo rm -rf ~/.pyrockoeost
-```
-**WINDOWS**  
-```bash
->  pip uninstall pyrockoeost
->  rmdir "C:\Users\USERNAME\.pyrockoeost"
-```
-## Prérequis
-Si vous vous trouvez dans un environnement virtuel, veuillez en sortir.  
-**Exemple avec conda :**
-```bash
->  conda deactivate
-```
-### Installation des prérequis :
-**LINUX ( Debian / Ubuntu ) :**
-```bash
->  sudo apt update
->  sudo apt upgrade
->  sudo apt-get install python3-pip
->  sudo pip3 install --upgrade pip
->  sudo sh prerequisites/prerequisites_debian_python3.sh
+>  pip3 install pyrockoeost
 ```
 **WINDOWS**  
 REQUIS : Microsoft C++ build tools  
 Ouvrir "windows-install-build-tools.bat" pour installer rapidement.
-```bash
->  prerequisites/prerequisites.bat
-```
-
-## Installation
-### Installation avec PIP.  
-**LINUX :**
-```bash
->  sudo pip3 install pyrockoeost # Ajouter "--break-system-packages" pour bypass le warning d'environnement virtuel
-```
-**WINDOWS**  
 ```bash
 >  pip install pyrockoeost
 ```
@@ -95,22 +57,14 @@ Ouvrir "windows-install-build-tools.bat" pour installer rapidement.
 >  sudo pip3 install .
 ```
 **WINDOWS**  
+REQUIS : Microsoft C++ build tools  
+Ouvrir "windows-install-build-tools.bat" pour installer rapidement.
 ```bash
 >  cd pyrockoeost
 >  pip install .
 ```
 
-### Quelques erreurs connues :
-
-Pour l'erreur `PyQt5 no such file or directory : "setup.py egg_info"` :
-
-- Revoir la section **Prérequis**.
-
-Pour l'erreur `qt.qpa.plugin: Could not load the Qt platform plugin "xcb"` :
-```bash
-> sudo pip3 uninstall PyQt5
-> sudo apt install python3-pyqt5
-```
+### Quelques erreurs de lib connues:
 
 Pour l'erreur `No module names PyQt4`, installez :
 ```bash
@@ -125,16 +79,6 @@ Pour l'erreur `No module names QtOpenGL`, installez :
 Pour l'erreur `No module names QtSvg`, installez :
 ```bash
 > sudo apt-get install python-pyqt5.qtsvg
-```
-
-## Mettre à jour PyrockoEost
-**LINUX :**
-```bash
->  sudo pip3 install --upgrade pyrockoeost
-```
-**WINDOWS**  
-```bash
->  pip install --upgrade pyrockoeost
 ```
 
 ## Configuration
@@ -202,7 +146,7 @@ En maintenant la touche `Shift`, vous pouvez sélectionner plusieurs marqueurs p
 Le touche `A` vous permet de sélectionner tous les marqueurs.
 
 ### Affecter un type à un marqueur
-Les types sont définis dans le fichier de configuration `$HOME/.pyrockoeost/snuffler.pf` , vous pouvez modifier les raccourcis clavier attribués depuis ce fichier de configuration. 
+Les types sont définis dans le fichier de configuration `$HOME/.pyrocko/snuffler.pf` , vous pouvez modifier les raccourcis clavier attribués depuis ce fichier de configuration. 
 Par défaut, les valeurs attribuées sont les suivantes:
 
 |Touche| Phase |

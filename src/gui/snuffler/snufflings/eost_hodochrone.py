@@ -138,12 +138,12 @@ class EOST_hodochrone(Snuffling):
 
         # Vérifier si le chemin existe
         if not os.path.exists(hodochrone_folder_path):
-            self.show_message("ERREUR ", "Le chemin hodochrone_path n'est pas valide, vérifie t'as config dans le fichier snuffler.pf")
+            self.show_message("ERREUR ", "Le chemin hodochrone_path n'est pas valide, vérifier la config dans le fichier snuffler.pf")
         else:
             self.hodochrone_folder_path_valid = True
         
         if not os.path.exists(path_save_depu_start):
-            self.show_message("ERREUR ", "Le chemin pointe_path n'est pas valide, vérifie t'as config dans le fichier snuffler.pf")
+            self.show_message("ERREUR ", "Le chemin pointe_path n'est pas valide, vérifier la config dans le fichier snuffler.pf")
         else:
             self.pointe_folder_path_valid = True
         
@@ -256,7 +256,7 @@ class EOST_hodochrone(Snuffling):
                 self.show_message("ERREUR ", "Tu n'as pas défini au moins deux phases !")
                 return None
         else :
-            self.show_message("ERREUR ", "Le chemin hodochrone_path n'est pas valide, vérifie t'as config dans le fichier snuffler.pf")
+            self.show_message("ERREUR ", "Le chemin hodochrone_path n'est pas valide, vérifier la config dans le fichier snuffler.pf")
             return None
 
     def get_open_file_type(self):
@@ -451,7 +451,7 @@ class EOST_hodochrone(Snuffling):
             # Et on affiche une petite fenêtre, pour remplir l'utilisateur de bonheur !!!
             self.show_message("Pointé sauvegardé", file_path)
         else :
-            self.show_message("ERREUR ", "Le chemin pointe_path n'est pas valide, vérifie t'as config dans le fichier snuffler.pf")
+            self.show_message("ERREUR ", "Le chemin pointe_path n'est pas valide, vérifier la config dans le fichier snuffler.pf")
             return None
 
 

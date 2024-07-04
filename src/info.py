@@ -1,7 +1,7 @@
 # This module is automatically created from setup.py
 git_sha1 = None
 local_modifications = None
-version = '2023.008'
-long_version = 'pyrockoeost-2023.008-2023-10-15_14:26:12'  # noqa
-installed_date = '2023-10-15_14:26:12'
-src_path = 'C:\\Users\\kylia\\Desktop\\pyrockoeost'
+version = '2024.3'
+long_version = 'pyrockoeost-2024.3-2024-07-04_12:30:20'  # noqa
+installed_date = '2024-07-04_12:30:20'
+src_path = '/home/user/Music/pyrockoeost'

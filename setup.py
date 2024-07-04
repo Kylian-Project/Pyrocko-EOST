@@ -15,7 +15,7 @@ is_windows = sys.platform.startswith('win')
 have_pep621_support = pv(setuptools_version) >= pv('61.0.0')
 
 packname = 'pyrockoeost'
-version = '2023.009'
+version = '2024.3'
 
 
 def get_numpy_include():
@@ -497,14 +497,14 @@ if not have_pep621_support:
             ' geophysical inversion'],
         python_requires='>=3.7, <4',
         install_requires=[
-            'numpy>=1.16',
+            'numpy==1.26.4',
             'scipy>=1.0',
-            'pyyaml',
-            'matplotlib',
-            'requests',
-            'PyQt5',
-            'PyQtWebEngine',
-            'vtk',
+            'pyyaml==6.0.1',
+            'matplotlib<3.9',
+            'requests==2.32.3',
+            'PyQt5==5.15.10',
+            'PyQtWebEngine==5.15.6',
+            'vtk==9.3.1',
         ],
 
         # extras_require={
